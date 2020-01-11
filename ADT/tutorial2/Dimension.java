@@ -7,17 +7,22 @@ public class Dimension {
 
     public static void main(final String[] args) {
         int[][] array = { { 1, 3, 4 }, { 3, 4, 5 } };
-        System.out.println("Summation: " + summation(array));
+        int[] myAnswer = new int[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            myAnswer[i] = summation(array[i]);
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(myAnswer[i]);
+        }
+
     }
 
-    static int summation(int [][] a){
+    static int summation(int[] a) {
         int sum = 0;
-        for (int i =0; i < a.length ; i++){
-            // loop i: counter rows
-            for (int j = 0; j < a[i].length ; j++) {
-                // loop j: counter columns
-                sum = sum + a[i][j];
-            }
+        for (int i = 0; i < a.length; i++) {
+            sum = sum + a[i];
         }
         return sum;
     }
