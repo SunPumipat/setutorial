@@ -29,7 +29,7 @@ class Grade {
             }
         }
 
-        return total_grade/total_credit;
+        return total_grade / total_credit;
     }
 
 }
